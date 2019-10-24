@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.UserMapper">
+ <select id="getUser" parameterType="long" resultType="com.example.demo.pojo.User">
+     SELECT *
+     FROM t_user
+     WHERE  id = #{id}
+ </select>
+    <insert id="insertUser" parameterType="com.example.demo.pojo.User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_user(
+        user_name,
+        note
+        )VALUES (
+        #{userName},
+        #{note}
+        )
+    </insert>
+</mapper>
