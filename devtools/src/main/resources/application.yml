@@ -1,0 +1,16 @@
+spring:
+  devtools:
+    restart:
+      #是否启动自动重启功能
+      enabled: true
+      #在原来的基础上增加重启服务的文件夹目录
+      additional-paths: src/main/java
+      #在原来的基础上增加不重启服务的文件夹目录
+      additional-exclude:
+      #不重启服务的文件夹配置
+      exclude: META-INF/maven/**,META-INF/resources/**
+      #设置触发文件 当需要实际触发重启检查时 则需要修改这个文件
+      trigger-file:
+  thymeleaf:
+    #页面不加载缓存，修改即时生效
+    cache: false
